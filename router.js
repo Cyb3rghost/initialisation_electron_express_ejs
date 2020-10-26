@@ -39,9 +39,6 @@ function init(callback) {
     /* On s'assure que le serveur n'est vraiment pas démarré */
     router.isStarted = false;
  
-    /* Ajout de express-ejs-layouts */
-    expressApp.use(ejsLayout);
- 
     /* J'utilise ici EJS comme moteur de template */
     expressApp.set('view engine', 'ejs');
  

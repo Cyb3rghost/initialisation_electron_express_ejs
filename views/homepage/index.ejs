@@ -1,31 +1,143 @@
-<div class="container  p-5">
+<!DOCTYPE html>
+<html>
+   <%- include('../partials/head') -%>
+  <body style="background-color: #BFBFBF;">
     
-    <h1 class="text-center">FKSimplon</h1>
-    <br/>
-    <div class="card">
+    <%- include('../partials/header') -%>
 
-      <div class="card-body">
+    <h5 class="ml-2">Standard <span class="float-right p-1" data-toggle="modal" data-target="#historiqueModal">📋</span></h5>
+      <input type="text" id="ecranCalcul" style="
+          display: block;
+          width: 100%;
+          height: calc(1.5em + 0.75rem + 40px);
+          padding: 0.375rem 0.75rem;
+          font-size: 3rem;
+          font-weight: 400;
+          line-height: 1.5;
+          color: #495057;
+          border: 0px;
+          text-align: right;
+          background-clip: padding-box;
+          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      " value="0" disabled />
+    <!-- You can also require other files to run in this process -->
 
-        <div id="message"></div>
+    <div class="row ml-0 mr-0" style="padding: 0px !important;">
 
-        <form method="post" id="connexion">
-          <div class="form-group">
-            <label>Nom d'utilisateur</label>
-            <input type="text" class="form-control" id="username" required>
-          </div>
-          <div class="form-group">
-            <label>Mot de passe</label>
-            <input type="password" class="form-control" id="password" required>
-          </div>
-          <button type="submit" class="btn btn-dark btn-block">Connexion</button>
-          <a id="menuInscription" class="btn btn-dark btn-block">Inscription</a>
-          <a id="menuDashboard" class="btn btn-dark btn-block">Dashboard</a>
-        </form>
+      <div class="col-2" style="padding: 0px !important;">
 
+        <button type="button" value="/" id="boutonX1" class="btn btn-light btn-block">/</button>
 
       </div>
+      <div class="col-2" style="padding: 0px !important;">
 
+        <button type="button" value="*" id="boutonX2" class="btn btn-light btn-block">X</button>
+        
+      </div>
+      <div class="col-2" style="padding: 0px !important;">
+
+        <button type="button" value="-" id="boutonX3" class="btn btn-light btn-block">-</button>
+        
+      </div>
+      <div class="col-2" style="padding: 0px !important;">
+
+        <button type="button" value="+" id="boutonX4" class="btn btn-light btn-block">+</button>
+        
+      </div>
+      <div class="col-2" style="padding: 0px !important;">
+
+        <button type="button" value="=" id="boutonX5" class="btn btn-light btn-block">=</button>
+        
+      </div>
+      <div class="col-2" style="padding: 0px !important;">
+
+        <button type="button" value="C" id="boutonX6" class="btn btn-light btn-block">C</button>
+        
+      </div>
 
     </div>
-  
+
+    <div class="row ml-0 mr-0" style="padding: 0px !important;">
+    
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="7" id="bouton7" class="btn btn-light btn-block">7</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="8" id="bouton8" class="btn btn-light btn-block">8</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="9" id="bouton9" class="btn btn-light btn-block">9</button>
+
+      </div>   
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="4" id="bouton4" class="btn btn-light btn-block">4</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="5" id="bouton5" class="btn btn-light btn-block">5</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="6" id="bouton6" class="btn btn-light btn-block">6</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="1" id="bouton1" class="btn btn-light btn-block">1</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="2" id="bouton2"  class="btn btn-light btn-block">2</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="3" id="bouton3" class="btn btn-light btn-block">3</button>
+
+      </div>  
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" class="btn btn-light btn-block">?</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="0" id="bouton0" class="btn btn-light btn-block">0</button>
+
+      </div>
+      <div class="col-4" style="padding: 0px !important;">
+
+        <button type="button" value="," id="boutonXX" class="btn btn-light btn-block">,</button>
+
+      </div> 
+    
+    
+    </div>
+
+  </body>
+</html>
+
+<div class="modal fade" id="historiqueModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Historique</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+    </div>
+  </div>
 </div>
